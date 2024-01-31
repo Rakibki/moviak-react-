@@ -6,10 +6,33 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import sideber from "../../assets/images/sideber.jpg";
 import add from "../../assets/images/add.png";
+import Button from "react-bootstrap/Button";
+import BookMovie from "../../components/modals/bookMovie/BookMovie";
 
 const ShowDetails = () => {
   const [show, setShow] = useState({});
   const { showId } = useParams();
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
 
   useEffect(() => {
     fetch("https://api.tvmaze.com/search/shows?q=all")
@@ -21,6 +44,10 @@ const ShowDetails = () => {
   }, []);
 
   console.log(show);
+
+  const handleBook = () => {
+    setIsOpen(true);
+  };
 
   return (
     <div>
@@ -44,6 +71,15 @@ const ShowDetails = () => {
                   <p>Movie ended: {show?.show?.ended}</p>
                   <p>Movie days: {show?.show?.ended[0]}</p>
                   <p>country: {show?.show?.network?.country?.name}</p>
+
+                  <div>
+                    <Button
+                      onClick={handleBook}
+                      style={{ backgroundColor: "#fe7900", border: "none" }}
+                    >
+                      Book A Movie Ticket
+                    </Button>
+                  </div>
                 </Col>
               </Row>
               <div className="mt-5">
@@ -58,6 +94,12 @@ const ShowDetails = () => {
           </Row>
         </Container>
       </div>
+      <BookMovie
+        closeModal={closeModal}
+        afterOpenModal={afterOpenModal}
+        modalIsOpen={modalIsOpen}
+        customStyles={customStyles}
+      />
     </div>
   );
 };
