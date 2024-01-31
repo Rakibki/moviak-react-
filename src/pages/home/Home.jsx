@@ -1,4 +1,5 @@
 import Shows from "../../components/shows/Shows";
+import Add from "./Add";
 import Banner from "./Banner";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Banner />
       <Shows />
+      <Add />
     </div>
   );
 };
