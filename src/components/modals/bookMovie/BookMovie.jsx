@@ -4,6 +4,8 @@ import Title from "../../title/Title";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
+import getLocalStore from "../../../utils/getLocalStore/getLocalStore";
+import { toast } from "react-toastify";
 
 const BookMovie = ({
   modalIsOpen,
@@ -12,18 +14,18 @@ const BookMovie = ({
   closeModal,
   show,
 }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("click");
-  };
-
   const handleBook = (e) => {
     e.preventDefault();
     const MovieName = e.target.MovieName.value;
     const MovieId = e.target.MovieId.value;
     const name = e.target.name.value;
     const email = e.target.email.value;
-    console.log({ name, email, MovieName, MovieId });
+    const tikets = getLocalStore("tikets");
+    const tiketData = { name, email, MovieName, MovieId };
+    tikets.push(tiketData);
+    const tiketStr = JSON.stringify(tikets);
+    localStorage.setItem("tikets", tiketStr);
+    toast.success("Tickets have been successfully purchased !");
   };
 
   return (
@@ -45,16 +47,22 @@ const BookMovie = ({
               placeholder="Movie Name"
               defaultValue={show?.show?.name}
               name="MovieName"
+              disabled
             />
             <Form.Control
               placeholder="Movie Id"
               defaultValue={show?.show?.id}
               name="MovieId"
+              disabled
             />
           </div>
           <div style={{ display: "flex", gap: "6px" }}>
-            <Form.Control placeholder="Enter Your Name" name="name" />
-            <Form.Control placeholder="Enter Your Email" name="email" />
+            <Form.Control required placeholder="Enter Your Name" name="name" />
+            <Form.Control
+              required
+              placeholder="Enter Your Email"
+              name="email"
+            />
           </div>
           <Button
             type="submit"
