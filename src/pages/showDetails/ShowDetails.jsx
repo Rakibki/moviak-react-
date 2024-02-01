@@ -69,7 +69,7 @@ const ShowDetails = () => {
                   <p>Movie runtime: {show?.show?.runtime}</p>
                   <p>Movie premiered: {show?.show?.premiered}</p>
                   <p>Movie ended: {show?.show?.ended}</p>
-                  <p>Movie days: {show?.show?.ended[0]}</p>
+                  {/* <p>Movie days: {show?.show?.days[0]}</p> */}
                   <p>country: {show?.show?.network?.country?.name}</p>
 
                   <div>
@@ -99,6 +99,7 @@ const ShowDetails = () => {
         afterOpenModal={afterOpenModal}
         modalIsOpen={modalIsOpen}
         customStyles={customStyles}
+        show={show}
       />
     </div>
   );

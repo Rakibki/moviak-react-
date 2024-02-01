@@ -16,14 +16,24 @@ const Shows = () => {
   }, []);
 
   return (
-    <div className="mt-5">
+    <div
+      style={{
+        backgroundColor: "#000209",
+        padding: "10px",
+        overflow: "hidden",
+        paddingBottom: "50px",
+        paddingTop: "50px",
+        zIndex: 5,
+      }}
+      className=""
+    >
       <Title text={"Newest Movie"} />
       <Swiper
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
         }}
-        slidesPerView={4}
+        slidesPerView={5}
         spaceBetween={15}
         pagination={{
           clickable: true,

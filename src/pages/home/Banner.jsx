@@ -8,17 +8,25 @@ import banner5 from "../../assets/images/banner5.jpg";
 
 const Banner = () => {
   return (
-    <AwesomeSlider style={{ height: "550px" }}>
+    <AwesomeSlider style={{ height: "550px", overflow: "hidden" }}>
       <div
         style={{
           backgroundImage: `url(${banner1})`,
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 style={{fontSize: "50px", fontWeight: "bold"}}>
+        <h1 style={{ fontSize: "50px", fontWeight: "bold" }}>
           Kubo and the Two <span style={{ color: "#fe7900" }}>Strings</span>
         </h1>
-        <p style={{ color: "#fff", fontFamily: "sans-serif", textAlign: "center", marginTop: "5px", fontSize: "18px" }}>
+        <p
+          style={{
+            color: "#fff",
+            fontFamily: "sans-serif",
+            textAlign: "center",
+            marginTop: "5px",
+            fontSize: "18px",
+          }}
+        >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br />
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab ...
@@ -31,10 +39,18 @@ const Banner = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 style={{fontSize: "50px", fontWeight: "bold"}}>
+        <h1 style={{ fontSize: "50px", fontWeight: "bold" }}>
           Kubo and the Two <span style={{ color: "#fe7900" }}>Strings</span>
         </h1>
-        <p style={{ color: "#fff", fontFamily: "sans-serif", textAlign: "center", marginTop: "5px", fontSize: "18px" }}>
+        <p
+          style={{
+            color: "#fff",
+            fontFamily: "sans-serif",
+            textAlign: "center",
+            marginTop: "5px",
+            fontSize: "18px",
+          }}
+        >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br />
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab ...
@@ -46,10 +62,18 @@ const Banner = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 style={{fontSize: "50px", fontWeight: "bold"}}>
+        <h1 style={{ fontSize: "50px", fontWeight: "bold" }}>
           Kubo and the Two <span style={{ color: "#fe7900" }}>Strings</span>
         </h1>
-        <p style={{ color: "#fff", fontFamily: "sans-serif", textAlign: "center", marginTop: "5px", fontSize: "18px" }}>
+        <p
+          style={{
+            color: "#fff",
+            fontFamily: "sans-serif",
+            textAlign: "center",
+            marginTop: "5px",
+            fontSize: "18px",
+          }}
+        >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br />
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab ...
@@ -61,10 +85,18 @@ const Banner = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 style={{fontSize: "50px", fontWeight: "bold"}}>
+        <h1 style={{ fontSize: "50px", fontWeight: "bold" }}>
           Kubo and the Two <span style={{ color: "#fe7900" }}>Strings</span>
         </h1>
-        <p style={{ color: "#fff", fontFamily: "sans-serif", textAlign: "center", marginTop: "5px", fontSize: "18px" }}>
+        <p
+          style={{
+            color: "#fff",
+            fontFamily: "sans-serif",
+            textAlign: "center",
+            marginTop: "5px",
+            fontSize: "18px",
+          }}
+        >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br />
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab ...
@@ -76,10 +108,18 @@ const Banner = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 style={{fontSize: "50px", fontWeight: "bold"}}>
+        <h1 style={{ fontSize: "50px", fontWeight: "bold" }}>
           Kubo and the Two <span style={{ color: "#fe7900" }}>Strings</span>
         </h1>
-        <p style={{ color: "#fff", fontFamily: "sans-serif", textAlign: "center", marginTop: "5px", fontSize: "18px" }}>
+        <p
+          style={{
+            color: "#fff",
+            fontFamily: "sans-serif",
+            textAlign: "center",
+            marginTop: "5px",
+            fontSize: "18px",
+          }}
+        >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br />
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab ...
